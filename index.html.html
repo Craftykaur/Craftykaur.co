@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crafty Kaur | Exquisite 3D Resin Artwork & Custom Epoxy Designs</title>
+  <meta name="description" content="Discover premium handcrafted resin art by Crafty Kaur. Custom ocean wave tables, geode wall art, coasters, and custom commissions. Based in Kurukshetra, India.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- Background Resin Fluid Effect Canvas (Behind everything) -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="./assets/logo.jpg" alt="Crafty Kaur Logo" class="logo-img">
+        <span class="logo-text">Crafty <span class="accent-text">Kaur</span></span>
+      </a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / 3D Interactive Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="tagline">Premium Handmade Epoxy Art</span>
+          <h1>Glossy Masterpieces Crafted to Perfection</h1>
+          <p class="description">
+            Experience the mesmerizing depth of custom-poured resin art. Specializing in beautiful photo keepsake blocks, flower & garland preservation, crystalline geode canvases, and custom memory plaques. Handmade with love in Kurukshetra, Haryana, India.
+          </p>
+          <div class="hero-buttons">
+            <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+            <a href="#contact" class="btn btn-outline">Order Custom Piece</a>
+          </div>
+        </div>
+        
+        <!-- Interactive Showcase Card -->
+        <div class="viewer-card-container">
+          <div class="viewer-card">
+            <div class="viewer-header">
+              <span class="status-indicator">● SIGNATURE SHOWCASE</span>
+              <div class="viewer-controls">
+                <button class="viewer-toggle active" data-piece="photo_block">Photo Block</button>
+                <button class="viewer-toggle" data-piece="garland_block">Garland Block</button>
+                <button class="viewer-toggle" data-piece="rose_plaque">Rose Plaque</button>
+                <button class="viewer-toggle" data-piece="geode">Geode Canvas</button>
+              </div>
+            </div>
+            <div class="canvas-container">
+              <img id="showcase-img" src="./assets/family_photo_resin.jpg" alt="Family Photo Keepsake Block" class="showcase-img">
+              <div class="shimmer-overlay"></div>
+            </div>
+            <div class="viewer-footer">
+              <h3 id="viewer-title">Family Photo Keepsake Block</h3>
+              <p id="viewer-desc">Preserve your cherished family memories inside a crystal-clear, high-gloss resin block, framed with gold flakes and delicate dried flowers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section class="quotes-section">
+      <div class="quotes-container">
+        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+        <p class="quote-text">"Resin art is where liquid flow freezes into a glass-like capture of time. In the swirling cells of epoxy, a unique universe is poured and preserved."</p>
+        <span class="quote-author">— Crafty Kaur</span>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Creations</h2>
+          <p>Every piece is uniquely poured or hand-stitched and can never be replicated exactly, ensuring you own a truly one-of-a-kind masterwork.</p>
+          
+          <!-- Category Filters -->
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All Creations</button>
+            <button class="filter-btn" data-filter="resin">Resin Art & Decor</button>
+            <button class="filter-btn" data-filter="preservation">Keepsake Preservation</button>
+            <button class="filter-btn" data-filter="embroidery">Embroidery Hoops</button>
+          </div>
+        </div>
+        
+        <div class="gallery-grid">
+          <!-- Card 1 -->
+          <div class="gallery-card" data-piece="photo_block" data-category="preservation">
+            <div class="card-image">
+              <img src="./assets/family_photo_resin.jpg" alt="Family Photo Keepsake Resin Block">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Keepsake Preservation</span>
+              <h3>Family Photo Keepsake Block</h3>
+              <p>Preserve your cherished family memories inside a crystal-clear, high-gloss resin block, framed with gold flakes and delicate dried flowers.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="gallery-card" data-piece="garland_block" data-category="preservation">
+            <div class="card-image">
+              <img src="./assets/resin_mk_plaque.jpg" alt="Wedding Garland Square Keepsake Block">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Keepsake Preservation</span>
+              <h3>Wedding Garland Square Block</h3>
+              <p>A heavy, optical-grade square resin block preserving actual wedding flowers, garlands, and gold leaf shards forever.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="gallery-card" data-piece="rose_plaque" data-category="preservation">
+            <div class="card-image">
+              <img src="./assets/resin_ad_plaque.jpg" alt="Rose & Pearl Round Resin Plaque">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Keepsake Preservation</span>
+              <h3>Rose & Pearl Round Plaque</h3>
+              <p>Elegant tabletop plaque preserving wedding roses, gold accents, and pearls with custom date lettering.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="gallery-card" data-piece="geode" data-category="resin">
+            <div class="card-image">
+              <img src="./assets/geode_art.jpg" alt="Luxurious Resin Geode Wall Art">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Resin Art & Decor</span>
+              <h3>Amethyst Geode Canvas</h3>
+              <p>Textured raw crystal points, sparkling amethyst color gradients, and rich veins of shimmering gold leaf under a glass finish.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="gallery-card" data-category="resin">
+            <div class="card-image">
+              <img src="./assets/coasters.jpg" alt="Abstract Resin Coasters">
+            </div>
+            <div class="card-info">
+              <span class="card-category">Resin Art & Decor</span>
+              <h3>Navy & Gold Coasters</h3>
+              <p>Abstract coasters featuring deep indigo dyes, gold powder swirls, and white cells resembling liquid stone. Scratch-resistant finish.</p>
+            </div>
+          </div>
+          <!-- Card 6 (New) -->
+          <div class="gallery-card" data-category="embroidery">
+            <div class="card-image">
+              <img src="./assets/embroidery_family.jpg" alt="Custom Family Embroidery Hoop">
+            </div>
+            <div class="card-info">
+              <span class="card-category">Embroidery Hoops</span>
+              <h3>Happy Family Portrait Hoop</h3>
+              <p>Hand-embroidered custom family portrait on canvas, finished with decorative gold beads and dangling woolen pink/green tassels.</p>
+            </div>
+          </div>
+          <!-- Card 7 (New) -->
+          <div class="gallery-card" data-category="embroidery">
+            <div class="card-image">
+              <img src="./assets/embroidery_wedding.jpg" alt="Traditional Wedding Couple Hoop">
+            </div>
+            <div class="card-info">
+              <span class="card-category">Embroidery Hoops</span>
+              <h3>Traditional Wedding Couple Hoop</h3>
+              <p>Highly detailed thread embroidery portraying a traditional bride and groom, combined with a custom calendar display.</p>
+            </div>
+          </div>
+          <!-- Card 8 (New) -->
+          <div class="gallery-card" data-category="embroidery">
+            <div class="card-image">
+              <img src="./assets/embroidery_calendar.jpg" alt="Anniversary Date Embroidery Hoop">
+            </div>
+            <div class="card-info">
+              <span class="card-category">Embroidery Hoops</span>
+              <h3>Anniversary Calendar Hoop</h3>
+              <p>Elegant custom calendar embroidery hoop decorated with floral borders and a red heart marking your special date.</p>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div class="gallery-card" data-piece="ocean_clock" data-category="resin">
+            <div class="card-image">
+              <img src="./assets/ocean_clock.jpg" alt="Luxury Ocean Wave Resin Wall Clock">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Resin Art & Decor</span>
+              <h3>Ocean Wave Resin Clock</h3>
+              <p>Luxury round wall clock blending natural live-edge walnut wood with multi-layered glossy blue ocean resin waves and golden minimalist hands.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div class="gallery-card" data-piece="monogram_m" data-category="preservation">
+            <div class="card-image">
+              <img src="./assets/monogram_m.jpg" alt="Preserved Bridal Flower Monogram Letter Keepsake">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Keepsake Preservation</span>
+              <h3>Bridal Monogram Keepsake</h3>
+              <p>A thick, freestanding monogram letter 'M' block made of clear resin, preserving dried wedding roses, foliage, and shimmering gold leaf.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 11 -->
+          <div class="gallery-card" data-category="resin">
+            <div class="card-image">
+              <img src="./assets/flower_tray.jpg" alt="Pressed Flower & Gold Foil Vanity Tray">
+            </div>
+            <div class="card-info">
+              <span class="card-category">Resin Art & Decor</span>
+              <h3>Pressed Flower Vanity Tray</h3>
+              <p>Luxury serving or vanity tray made of crystal-clear resin embedded with colorful pressed wildflowers, fern leaves, and side brass handles.</p>
+            </div>
+          </div>
+          <!-- Card 12 -->
+          <div class="gallery-card" data-piece="nebula_disc" data-category="resin">
+            <div class="card-image">
+              <img src="./assets/nebula_disc.jpg" alt="Milky Way Nebula Resin Tabletop Disc">
+              <div class="image-overlay">
+                <button class="btn btn-circle view-showcase-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <div class="card-info">
+              <span class="card-category">Resin Art & Decor</span>
+              <h3>Cosmic Nebula Plaque</h3>
+              <p>Circular tabletop art piece depicting a glowing galactic nebula made with swirling violet, indigo, and gold pigments and star glitter.</p>
+              <div class="card-actions">
+                <button class="btn btn-text view-showcase-btn">View in Showcase <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Craft & Process Section -->
+    <section class="process-section">
+      <div class="container process-grid">
+        <div class="process-image-container">
+          <!-- Glossy floating overlay cards illustrating process steps -->
+          <div class="process-step-card step-1">
+            <div class="step-num">01</div>
+            <h4>Timber Selection & Prep</h4>
+            <p>Sourcing premium live-edge wood, sealing it to prevent air bubbles, and building custom containment molds.</p>
+          </div>
+          <div class="process-step-card step-2">
+            <div class="step-num">02</div>
+            <h4>Layer-by-Layer Pouring</h4>
+            <p>Mixing optical-grade clear epoxy with pigments, metallic powders, and blowtorching to release micro-bubbles.</p>
+          </div>
+          <div class="process-step-card step-3">
+            <div class="step-num">03</div>
+            <h4>Multi-Stage Polishing</h4>
+            <p>Sanding with progressive grits up to 3000, then buffing with premium polishing compounds for a mirror-like finish.</p>
+          </div>
+        </div>
+        <div class="process-content">
+          <span class="tagline">The Artistry</span>
+          <h2>A Mirror-Like Polish, Layer by Careful Layer</h2>
+          <p>
+            Working with resin requires precision, patience, and a deep understanding of chemical cure times. Each of our creations is poured in multiple layers over several days to create the visual "floating" depth that characterizes high-end resin art. 
+          </p>
+          <p>
+            We use only premium, non-toxic, and UV-stabilized resin to ensure your artwork remains crystal clear and vibrant for years, without yellowing or fading.
+          </p>
+          <div class="process-features">
+            <div class="feature-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <h5>UV Resistant Formula</h5>
+                <p>Resists yellowing under natural sunlight exposures.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-sparkles"></i>
+              <div>
+                <h5>Scratch Resistant Gloss</h5>
+                <p>Finished with a hard-shell protective topcoat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-content">
+          <span class="tagline">About the Studio</span>
+          <h2>Crafty Kaur</h2>
+          <p class="about-story">
+            Based in the historic city of <strong>Kurukshetra, Haryana, India</strong>, Crafty Kaur is an artistic studio run with a passion for transforming memories, dried flowers, and liquid glass resin into functional luxury keepsakes.
+          </p>
+          <p>
+            What started as an exploration of colors and materials has blossomed into a full custom-pour design studio. From bespoke photo keepsakes and wedding flower garlands preserved in optical-grade blocks, to crystal geodes that energize your walls, our goal is to deliver breathtaking luxury that preserves your most cherished memories.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Handcrafted</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">Worldwide</div>
+              <div class="stat-label">Shipping</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-location-card">
+          <div class="card-inner">
+            <i class="fa-solid fa-location-dot location-icon animate-bounce"></i>
+            <h3>Our Workspace</h3>
+            <p>Kurukshetra, Haryana, India</p>
+            <span class="accent-subtext">Visits & Consultations by Appointment Only</span>
+            <div class="map-placeholder">
+              <!-- Visual abstract map layout to complement styling -->
+              <div class="map-glow"></div>
+              <div class="map-marker-pin"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Commission Section -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <span class="tagline">Get In Touch</span>
+            <h2>Let's Discuss Your Custom Order</h2>
+            <p>Have a specific size, wood species, or color palette in mind? Reach out to us via any of our channels. We specialize in custom commission pieces tailored to fit your space perfectly.</p>
+            
+            <div class="contact-details-list">
+              <a href="https://wa.me/message/ABVX4T43ML5FI1" target="_blank" class="contact-detail-link whatsapp-color">
+                <div class="contact-detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <span class="detail-label">WhatsApp Chat</span>
+                  <span class="detail-value">+91 70153 53872</span>
+                </div>
+              </a>
+              
+              <a href="https://www.instagram.com/crafty_kaur?igsh=ZG94cWNqbmFsMDY3" target="_blank" class="contact-detail-link instagram-color">
+                <div class="contact-detail-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div>
+                  <span class="detail-label">Instagram</span>
+                  <span class="detail-value">@crafty_kaur</span>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/share/19F9yN9xnQ/?mibextid=wwXIfr" target="_blank" class="contact-detail-link facebook-color">
+                <div class="contact-detail-icon"><i class="fa-brands fa-facebook"></i></div>
+                <div>
+                  <span class="detail-label">Facebook</span>
+                  <span class="detail-value">Crafty Kaur Art</span>
+                </div>
+              </a>
+              
+              <a href="mailto:craftykaur.co@gmail.com" class="contact-detail-link mail-color">
+                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="detail-label">Email Support</span>
+                  <span class="detail-value">craftykaur.co@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+917015353872" class="contact-detail-link phone-color">
+                <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <span class="detail-label">Phone Support</span>
+                  <span class="detail-value">+91 70153 53872</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Commission Form -->
+          <div class="contact-form-panel">
+            <h3>Send a Message</h3>
+            <form id="commission-form">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="interest">Interested In</label>
+                <select id="interest">
+                  <option value="table">Ocean River Table</option>
+                  <option value="geode">Geode Wall Art</option>
+                  <option value="coasters">Custom Coasters</option>
+                  <option value="other">Other Resin Commission</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Details (Size, Colors, etc.)</label>
+                <textarea id="message" rows="5" required placeholder="Describe what you want to create..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo-container">
+          <img src="./assets/logo.jpg" alt="Crafty Kaur Logo" class="logo-img footer-logo">
+          <h3>Crafty <span class="accent-text">Kaur</span></h3>
+        </div>
+        <p>Premium epoxy resin artworks and luxury home decor, individually handcrafted in Kurukshetra, India.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/message/ABVX4T43ML5FI1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/crafty_kaur?igsh=ZG94cWNqbmFsMDY3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/19F9yN9xnQ/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="mailto:craftykaur.co@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Studio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Product Care</h4>
+        <a href="#">Resin Maintenance</a>
+        <a href="#">Cleaning Guide</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Crafty Kaur. All Rights Reserved. Handcrafted with love.</p>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="main.js"></script>
+</body>
+</html>
